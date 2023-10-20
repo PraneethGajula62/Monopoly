@@ -1,8 +1,8 @@
-import Monopoly
+import PlayerAndProperty
 
 
 class Player:
-    def __init__(self, name = str, money = int, position = int, properties = list[Monopoly.TitleDeed], latest_roll = int):
+    def __init__(self, name = str, money = int, position = int, properties = list[PlayerAndProperty.Property], latest_roll = int):
         self.name = name 
         self.money = money
         self.position = position

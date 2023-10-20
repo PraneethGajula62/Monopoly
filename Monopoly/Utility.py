@@ -1,6 +1,8 @@
-import Monopoly
+import PlayerAndProperty
+import Player
+import Master_List.AllUtilities as AllUtilities
 
-class Utility(Monopoly.Property):
+class Utility(PlayerAndProperty):
     def __init__(self, mortgage = bool, mortgage_value = int, other_owned = bool):
             multiplier = self.rent
             self.mortgage = mortgage
@@ -17,7 +19,6 @@ class Utility(Monopoly.Property):
            self.multipllier = 10
            # should happen when "Property" gets "bought", so function of "Property" should check if other "Utility" is bought upon buying or trading it and then call this function.
           
-    def pay_up(self, payer = Monopoly.Player, receiver = Monopoly.Player):
+    def pay_up(self, payer = Player.Player, receiver = Player.Player):
            payer.money -= payer.latest_roll * self.multiplier
-
           
